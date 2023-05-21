@@ -54,7 +54,7 @@ public class BST<K extends Comparable<K>, V> {
         }
     }
     public void delete(K key) {
-
+        root = deleteNode(root, key);
     }
     public Iterable<K> iterator() {
 
