@@ -10,6 +10,8 @@ public class Main {
         bst.put(60, "Fig");
         bst.put(80, "Grape");
 
+        System.out.println("Size of the BST: " + bst.size());
+
         System.out.println("Value associated with key 40: " + bst.get(40));
         System.out.println("Value associated with key 45: " + bst.get(45));
 
