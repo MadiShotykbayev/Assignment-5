@@ -7,13 +7,13 @@ This is a Java implementation of a Binary Search Tree (BST) data structure. A BS
 The BST class represents the Binary Search Tree. It uses a private inner class Node to represent each node in the tree. Each Node object contains a key-value pair, as well as references to its left and right child nodes.
 
 ## Constructor
-Node(K key, V value): Constructs a new Node object with the specified key and value.
+- 'Node(K key, V value)': Constructs a new Node object with the specified key and value.
 ## Public Methods
-void put(K key, V value): Inserts a new key-value pair into the BST. If the key already exists, the corresponding value is updated.
-V get(K key): Retrieves the value associated with the specified key from the BST. If the key is not found, null is returned.
-void delete(K key): Removes the key-value pair with the specified key from the BST, if it exists.
-Iterable<K> iterator(): Returns an iterable collection of keys in the BST. The keys are returned in ascending order based on their natural ordering.
-int size(): Returns the number of key-value pairs stored in the BST.
+- 'void put(K key, V value)': Inserts a new key-value pair into the BST. If the key already exists, the corresponding value is updated.
+- 'V get(K key)': Retrieves the value associated with the specified key from the BST. If the key is not found, null is returned.
+- 'void delete(K key)': Removes the key-value pair with the specified key from the BST, if it exists.
+- 'Iterable<K> iterator()': Returns an iterable collection of keys in the BST. The keys are returned in ascending order based on their natural ordering.
+- 'int size()': Returns the number of key-value pairs stored in the BST.
 ## Usage
 Here's an example of how to use the BST class:
 
