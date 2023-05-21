@@ -56,6 +56,29 @@ public class BST<K extends Comparable<K>, V> {
     public void delete(K key) {
         root = deleteNode(root, key);
     }
+    private Node deleteNode(Node node, K key) {
+        if (node == null) {
+            return null;
+        }
+        int cmp = key.compareTo(node.key);
+        if (cmp < 0) {
+            node.left = deleteNode(node.left, key);
+        } else if (cmp > 0) {
+            node.right = deleteNode(node.right, key);
+        } else {
+            if (node.left == null) {
+                return node.right;
+            } else if (node.right == null) {
+                return node.left;
+            } else {
+                Node temp = node;
+                node = findMinNode(temp.right);
+                node.right = deleteMinNode(temp.right);
+                node.left = temp.left;
+            }
+        }
+        return node;
+    }
     public Iterable<K> iterator() {
 
     }
