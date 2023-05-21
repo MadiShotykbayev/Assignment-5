@@ -3,6 +3,8 @@ import java.util.List;
 
 public class BST<K extends Comparable<K>, V> {
     private Node root;
+    private int size; // Added size variable
+
     private class Node
     {
         private K key;
@@ -11,11 +13,12 @@ public class BST<K extends Comparable<K>, V> {
         public Node(K key, V value)
         {
             this.key = key;
-            this.value = value' '
+            this.value = value;
         }
     }
     public void put(K key, V value) {
         root = putNode(root, key, value);
+        size++; // Increment size when adding a node
     }
 
     private Node putNode(Node node, K key, V value) {
@@ -55,6 +58,7 @@ public class BST<K extends Comparable<K>, V> {
     }
     public void delete(K key) {
         root = deleteNode(root, key);
+        size--; // Decrement size when deleting a node
     }
     private Node deleteNode(Node node, K key) {
         if (node == null) {
@@ -103,5 +107,9 @@ public class BST<K extends Comparable<K>, V> {
             keys.add(node.key);
             inorderTraversal(node.right, keys);
         }
+    }
+
+    public int size() {
+        return size;
     }
 }
