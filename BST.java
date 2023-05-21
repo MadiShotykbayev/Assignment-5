@@ -93,6 +93,8 @@ public class BST<K extends Comparable<K>, V> {
         return node;
         }
     public Iterable<K> iterator() {
-
+        List<K> keys = new ArrayList<>();
+        inorderTravelsal(root, keys);
+        return keys;
     }
 }
