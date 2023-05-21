@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class BST<K extends Comparable<K>, V> {
     private Node root;
     private class Node
@@ -12,7 +15,7 @@ public class BST<K extends Comparable<K>, V> {
         }
     }
     public void put(K key, V value) {
-
+        root = putNode(root, key, value);
     }
     public V get(K key) {
 
