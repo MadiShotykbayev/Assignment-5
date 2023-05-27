@@ -22,5 +22,16 @@ public class Main {
         for (Integer key : bst.iterator()) {
             System.out.println(key);
         }
+
+        bst = new BST<>();
+        bst.put(5, "Five");
+        bst.put(3, "Three");
+        bst.put(7, "Seven");
+
+        boolean exists = bst.consists(3);
+        System.out.println(exists);
+
+        exists = bst.consists(9);
+        System.out.println(exists);
     }
 }
