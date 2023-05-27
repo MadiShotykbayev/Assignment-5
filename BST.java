@@ -108,8 +108,25 @@ public class BST<K extends Comparable<K>, V> {
             inorderTraversal(node.right, keys);
         }
     }
-
     public int size() {
         return size;
+    }
+    public boolean consists(K key) {
+        return containsKey(root, key);
+    }
+
+    private boolean containsKey(Node node, K key) {
+        if (node == null) {
+            return false;
+        }
+
+        int cmp = key.compareTo(node.key);
+        if (cmp < 0) {
+            return containsKey(node.left, key);
+        } else if (cmp > 0) {
+            return containsKey(node.right, key);
+        } else {
+            return true;
+        }
     }
 }
